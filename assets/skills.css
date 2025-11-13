@@ -1,0 +1,66 @@
+.skills-container {
+  display: flex;
+  gap: 20px; /* 左右欄間距 */
+  flex-wrap: wrap;
+}
+
+/* 左右欄 */
+.skills-left, .skills-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* 每個技能間距 */
+  position: relative;
+  min-width: 250px;
+}
+
+/* 左右欄豎線分隔 */
+.skills-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;   /* 線稍微伸出 */
+  width: 2px;
+  height: 100%;
+  background-color: #c9a6b1;
+}
+
+/* 單一技能文字 */
+.skill p {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* 技能條外框 */
+.skill-bar {
+  width: 400px;  /* 調整進度條長度 */
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+}
+
+/* 技能條填充 */
+.skill-level {
+  height: 100%;
+  background-color: #cda8b8;
+  border-radius: 10px 0 0 10px;
+  transition: width 1s ease-in-out;
+}
+
+/*技能*/
+.skill-pnp {
+  font-size: 24px;
+  background-color: #cda8b8;
+  color: white;
+  padding: 5px 10px;
+  display: block;   /* 變成整行 */
+  width: 25%;      /* 延伸整行寬度 */
+  border-radius: 5px;
+}
+
+#skills h2 {
+  text-align: left;   /* 標題靠左 */
+  margin-left: 0;     /* 避免預設的縮排 */
+}

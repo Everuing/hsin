@@ -1,0 +1,77 @@
+.footer {
+  text-align: center;          /* 文字置中 */
+  padding: 20px 0;
+  margin-top: 40px;            /* 與上方 section 保持距離 */
+  border-top: 2px solid #cda8b8; /* 上方橫線 */
+  background-color: #ECDCC9;   /* 可以和 section 顏色統一 */
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+@media (max-width: 768px) {
+  .card01 {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .card-top nav {
+    flex: 1 1 100%;
+    gap: 5px;
+  }
+
+  .skills-left, .skills-right {
+    min-width: 100%;
+  }
+
+  .skill-bar {
+    width: 100%; /* 技能條寬度自動調整 */
+  }
+
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .profile-text {
+    text-align: center;
+  }
+
+  .experience-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+    font-size: 12px;
+  }
+
+  .circle::after {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-pnp {
+    width: 50%;
+    font-size: 18px;
+  }
+
+  .skill-bar {
+    width: 100%;
+  }
+}
+

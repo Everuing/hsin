@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/Aboutme.css">
+    <link rel="stylesheet" href="assets/exp.css">
+    <link rel="stylesheet" href="assets/footer.css">
+    <link rel="stylesheet" href="assets/habits.css">
+    <link rel="stylesheet" href="assets/skills.css">
+
+</head>
+<body>
+<section class="card01">
+  <div class="card-top">
+    <h2><u>About me</u></h2>
+     <nav>
+      <a href="#about-me">About me</a>
+      <a href="#skills">Skills</a>
+      <a href="#habits">Habits</a>
+      <a href="#experience">Experience</a>
+    </nav>
+  </div>
+
+  <!-- 水平與垂直置中 -->
+  <div class="profile-container">
+    <img src="image/264261.jpg" class="profile-img" />
+    
+    <div class="profile-text">
+      <h1>謝信棠</h1>
+      <p>中原大學－資訊管理學系</p>
+      <p>2004/10/09</p>
+
+      <!-- 聯絡方式改成圖示連結 -->
+      <div class="contact-links">
+        <a href="https://www.instagram.com/_hsin.10/" target="_blank">
+          <img src="image/Instagram_icon.png" alt="Instagram" class="contact-icon" />
+        </a>
+        <a href="https://www.facebook.com/hsieh.shin.tang/" target="_blank">
+          <img src="image/2021_Facebook_icon.svg.webp" alt="Facebook" class="contact-icon" />
+        </a>
+        <a href="mailto:example@example.com">
+          <img src="image/emailicon.png" alt="Email" class="contact-icon" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 自我介紹段落 -->
+  <div class="about-me-text">
+    <p>
+        我是一名資訊管理系學生，熱衷於前端開發與資料分析。喜歡挑戰新技術，並將設計與程式結合，製作美觀且實用的作品。平時喜歡閱讀科技文章、參加校內活動，並努力提升自己的專業技能。
+    </p>
+  </div>
+</section>
+
+<section id="skills" class="card01">
+  <h2 class="card-top"><u>Skills</u></h2>
+
+  
+  <div class="skills-container">
+    <!-- 左右分欄 -->
+    <div class="skills-left">
+        <p class="skill-pnp">專業技能</p>
+    <div class="skill">
+        <p>前端網頁開發</p>
+        <div class="skill-bar-container">
+        <div class="skill-bar">
+            <div class="skill-level" style="width: 85%;"></div>
+        </div>
+        <span class="skill-percent">85%</span>
+        </div>
+    </div>
+
+    <div class="skill">
+        <p>資料庫管理</p>
+        <div class="skill-bar-container">
+        <div class="skill-bar">
+            <div class="skill-level" style="width: 70%;"></div>
+        </div>
+        <span class="skill-percent">70%</span>
+        </div>
+    </div>
+
+    <div class="skill">
+        <p>文書處理</p>
+        <div class="skill-bar-container">
+        <div class="skill-bar">
+            <div class="skill-level" style="width: 90%;"></div>
+        </div>
+        <span class="skill-percent">90%</span>
+        </div>
+    </div>
+    </div>
+
+<!-- 右欄同理 -->
+<div class="skills-right">
+    <p class="skill-pnp">程式技能</p>
+  <div class="skill">
+    <p>Python</p>
+    <div class="skill-bar-container">
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 90%;"></div>
+      </div>
+      <span class="skill-percent">90%</span>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p>C++</p>
+    <div class="skill-bar-container">
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 80%;"></div>
+      </div>
+      <span class="skill-percent">80%</span>
+    </div>
+  </div>
+  <div class="skill">
+    <p>Java</p>
+    <div class="skill-bar-container">
+      <div class="skill-bar">
+        <div class="skill-level" style="width: 87%;"></div>
+      </div>
+      <span class="skill-percent">87%</span>
+    </div>
+  </div>
+</div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const skills = document.querySelectorAll('.skill-level');
+
+  skills.forEach(skill => {
+    const targetWidth = skill.style.width; // 原本 HTML 設定的百分比
+    skill.style.width = "0%"; // 重設初始寬度
+
+    // 觸發動畫
+    setTimeout(() => {
+      skill.style.width = targetWidth;
+    }, 100); // 延遲 0.1 秒，保證動畫可被觸發
+  });
+});
+</script>
+
+
+
+<!-- Habbits 區塊 -->
+<section id="habits" class="card01">
+  <h2><u>Habbits</u></h2>
+
+  <div class="habits-container">
+    <div class="habit-circle">
+      <div class="circle" data-percent="75">
+        <span>跳舞</span>
+      </div>
+    </div>
+
+    <div class="habit-circle">
+      <div class="circle" data-percent="60">
+        <span>唱歌</span>
+      </div>
+    </div>
+
+    <div class="habit-circle">
+      <div class="circle" data-percent="50">
+        <span>寫程式</span>
+      </div>
+    </div>
+
+    <div class="habit-circle">
+      <div class="circle" data-percent="80">
+        <span>睡覺</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const circles = document.querySelectorAll('.circle');
+
+circles.forEach(circle => {
+  const percent = circle.getAttribute('data-percent');
+  let current = 0;
+
+  const interval = setInterval(() => {
+    if (current >= percent) {
+      clearInterval(interval);
+    } else {
+      current++;
+      circle.style.background = `conic-gradient(#cda8b8 0% ${current}%, #f6d6d6 ${current}% 100%)`;
+    }
+  }, 10); // 10ms 遞增一次，可調整動畫速度
+});
+</script>
+
+
+
+
+
+<section id="experience" class="card01">
+  <h2 class="card-top"><u>Experience</u></h2>
+
+  <div class="experience-container">
+    <!-- 第一組經驗 -->
+    <div class="experience-item">
+      <div class="experience-img">
+        <img src="image/soo.jpg" alt="Experience 1">
+      </div>
+      <div class="experience-text">
+        <h3>四系迎新宿營－活動組工人</h3>
+        <p class="exp-p">
+          迎新宿營是我上了大學後的第一個大活動，在一次因緣際會下加入活動組的行列，經過暑假兩個月的時間不畏風雨堅持做好自己的責任， 不斷的活動組輔應該具備的能力，包含跳舞、主持、帶關等等的，在9月份成功帶領新生們參加活動，也從中學習到大群體的生活以及與人社交的能力。
+        </p>
+      </div>
+    </div>
+
+    <!-- 第二組經驗 -->
+    <div class="experience-item">
+      <div class="experience-img">
+        <img src="image/sikou.jpg" alt="Experience 2">
+      </div>
+      <div class="experience-text">
+        <h3>四系聯合系考－隊輔組工人</h3>
+        <p class="exp-p">
+          在系烤擔任到隊輔組的角色，也體驗到了跟活動組完全不一樣的組務跟活動中的體驗。這次活動中我不僅學習到了帶團康的技巧也擔任到了跳舞的舞帶，也成為了去耶舞的一個契機。在活動的過程中也了解到了需要全程照顧和注意組內的小學員是一件費心費力的事情，但整體對我來說是一個收穫很多的活動。
+        </p>
+      </div>
+    </div>
+
+    <!-- 第三組經驗 -->
+    <div class="experience-item">
+      <div class="experience-img">
+        <img src="image/yawoo.jpg" alt="Experience 3">
+      </div>
+      <div class="experience-text">
+        <h3>十系聯合耶誕舞會－活動組工人</h3>
+        <p class="exp-p">
+          目前正在練習的活動，會在12月底表演，對我來說也是第一次這麼制度性的練舞。其實對我來說參加這個活動算是一個很大的挑戰，因為耶舞的活動組需要一段5分鐘高強度的男舞，然後組內的其他人也都是非常會跳舞的人，在練習的時候總會帕敢不上進度，但也是目前練習過程中最有成就感的活動。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 Hsin All Rights Reserved</p>
+  </div>
+</footer>
+</body>
+</html>

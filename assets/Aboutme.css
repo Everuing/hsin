@@ -1,0 +1,122 @@
+*{
+  font-family: 思源黑體;
+}
+
+body {
+  background-color: #D0A98F;
+  background-image: url(image/bg.jpg);
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.card01 {
+  width: 80%;
+  margin: 40px auto;
+  background-color: #ECDCC9;
+  
+  background-size: cover;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* section 置中對齊 */
+  gap: 30px;
+}
+
+/* card-top 保持原樣 */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* nav */
+.card-top nav {
+  display: flex;
+  justify-content: space-between;
+  flex: 0 0 40%;
+  background-color: #ECDCC9;
+  border-radius: 10px;
+  padding: 10px;  
+}
+
+.card-top nav a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  border-right: 4px solid #c9a6b1;
+  transition: color 0.3s ease;
+}
+
+.card-top nav a:last-child {
+  border-right: none;
+}
+
+.card-top nav a:hover {
+  color: white;
+}
+
+/* profile-container 水平排列並垂直置中 */
+.profile-container {
+  display: flex;
+  align-items: center; /* 垂直置中 */
+  justify-content: center; /* 水平置中 */
+  gap: 30px;
+}
+
+/* 圖片 */
+.profile-img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000000;
+}
+
+/* 文字 */
+.profile-text h1 {
+  margin: 0 0 10px 0;
+  font-size: 32px;
+  color: #333;
+}
+
+.profile-text p {
+  margin: 5px 0;
+  font-size: 24px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* 聯絡方式圖片 */
+.contact-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.contact-links .contact-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.contact-links .contact-icon:hover {
+  transform: scale(1.2);
+}
+
+/* 自我介紹段落 */
+.about-me-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  max-width: 1000px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+

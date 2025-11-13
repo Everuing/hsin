@@ -1,0 +1,64 @@
+.experience-container {
+  display: flex;
+  flex-direction: column; /* 垂直排列每組 */
+  gap: 20px;              /* 每組間距 */
+}
+
+/* 每組經驗的底色區塊 */
+.experience-item {
+  display: flex;           /* 左右分欄 */
+  gap: 20px;               /* 左右間距 */
+  align-items: flex-start;
+  background-color: #f0e0d6; /* 底色可調 */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* 左邊圖片 */
+.experience-img img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* 右邊文字 */
+.experience-text {
+  flex: 1;
+}
+
+.experience-text h3 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.experience-text p {
+  margin: 0 0 10px 0;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #555;
+}
+.experience-item {
+  flex-wrap: wrap; /* 手機上左右欄換行 */
+  gap: 10px;
+}
+
+
+/* 可選：加上 hover 效果 */
+.experience-item:hover {
+  background-color: #e2d4c3;
+}
+/* 左邊圖片 */
+.experience-img img {
+  width: 300px;               /* 原始大小 */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* 平滑過渡效果 */
+}
+
+/* 滑鼠經過放大 */
+.experience-img img:hover {
+  transform: scale(1.2);      /* 放大 10% */
+}
